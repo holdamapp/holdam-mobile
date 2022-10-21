@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:holdam_mobile/constants.dart';
+import 'package:holdam_mobile/widget/timer.dart';
 
 void main() {
   runApp(const MyApp());
@@ -6,13 +8,25 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
+
+  // const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Holdam App',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+
+      // theme: ThemeData(
+      //   primarySwatch: Colors.blue,
+
+      // ),
+      home: Scaffold(
+          appBar: AppBar(
+            title: const Text('mi app'),
+          ),
+          body: const Center(
+            child: MyTimer(key: timerKey)
+            ) // MyTimer(),
+          ),
     );
   }
 }
