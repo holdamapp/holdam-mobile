@@ -1,6 +1,14 @@
-import 'package:flutter/material.dart' show Color, Key, MaterialButton, Text, TextStyle;
+import 'package:flutter/material.dart' 
+  show 
+      Color,
+      MaterialButton,
+      Text,
+      TextStyle;
 
-import '../constants.dart';
+import '../constants.dart' 
+  show 
+      resetButtonKey, 
+      startButtonKey ;
 
 MaterialButton startButton(onPressed){
 
@@ -27,7 +35,7 @@ MaterialButton resetButton(onPressed){
   return MaterialButton(
           onPressed: ()=>{ onPressed() },
           color:color,
-          key: const Key('reset_button'),
+          key: resetButtonKey,
           child:child,
         );
 }

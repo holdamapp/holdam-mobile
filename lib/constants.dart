@@ -4,4 +4,4 @@ import 'package:flutter/material.dart'
 
 const startButtonKey = Key('start_button');
 const resetButtonKey = Key('reset_button');
-const timerKey = Key('reset_button');
+const timerKey = Key('timer_widget');
