@@ -9,23 +9,18 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Holdam App',
 
-      // theme: ThemeData(
-      //   primarySwatch: Colors.blue,
-
-      // ),
       home: Scaffold(
           appBar: AppBar(
             title: const Text('mi app'),
           ),
           body: const Center(
             child: MyTimer(key: timerKey)
-            ) // MyTimer(),
+            )
           ),
     );
   }
