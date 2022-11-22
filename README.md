@@ -1,2 +1,2 @@
 # holdam-mobile
-MObile app for holdam app
+Mobile app for holdam app
