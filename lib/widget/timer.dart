@@ -3,12 +3,21 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart'
-    show BuildContext, Column, MainAxisAlignment, Row, SizedBox, State, StatefulWidget, Text, TextStyle, Widget, visibleForTesting;
+    show
+        BuildContext,
+        Column,
+        MainAxisAlignment,
+        Row,
+        SizedBox,
+        State,
+        StatefulWidget,
+        Text,
+        TextStyle,
+        Widget,
+        visibleForTesting;
 
 import 'package:holdam_mobile/widget/buttons.dart'
-    show 
-        resetButton, 
-        startButton;
+    show resetButton, startButton;
 
 class MyTimer extends StatefulWidget {
   const MyTimer({super.key});
