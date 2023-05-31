@@ -2,13 +2,15 @@
 
 import 'dart:async';
 
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart'
-    show BuildContext, Column, MainAxisAlignment, Row, SizedBox, State, StatefulWidget, Text, TextStyle, Widget, visibleForTesting;
+    show AppBar, BuildContext, ButtonStyle, Column, MainAxisAlignment, MaterialPageRoute, Navigator, Row, Scaffold, SizedBox, State, StatefulWidget, Text, TextButton, TextStyle, Theme, Widget, visibleForTesting;
 
 import 'package:holdam_mobile/widget/buttons.dart'
     show 
         resetButton, 
         startButton;
+import 'package:holdam_mobile/widget/signin.dart';
 
 class MyTimer extends StatefulWidget {
   const MyTimer({super.key});
@@ -56,9 +58,36 @@ class MyTimerState extends State<MyTimer> {
     });
   }
 
+  void navigate_to(screen){ //TODO Refactor. Code repeated
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => screen,
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Column(
+    final ButtonStyle logout_button_style = TextButton.styleFrom(
+      foregroundColor: Theme.of(context).colorScheme.onPrimary,
+    );
+    return Scaffold(
+      appBar: AppBar(
+          title: const Text('Timer'),
+          actions: <Widget>[  //TODO Refactor. Code repeated
+            TextButton(
+              style: logout_button_style,
+              onPressed: (){
+                FirebaseAuth.instance.signOut().then(
+                        (value) => navigate_to(const SignInScreen())
+                );
+              },
+              child: const Text("Sign out"),
+          )
+        ],
+      ),
+      body: Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text(
@@ -76,6 +105,7 @@ class MyTimerState extends State<MyTimer> {
           ],
         )
       ],
+    ),
     );
   }
 }
