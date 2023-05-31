@@ -3,7 +3,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart'
-    show AppBar, BuildContext, Column, MainAxisAlignment, Row, Scaffold, SizedBox, State, StatefulWidget, Text, TextStyle, Widget, visibleForTesting;
+    show BuildContext, Column, MainAxisAlignment, Row, SizedBox, State, StatefulWidget, Text, TextStyle, Widget, visibleForTesting;
 
 import 'package:holdam_mobile/widget/buttons.dart'
     show 
@@ -58,29 +58,24 @@ class MyTimerState extends State<MyTimer> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(
-        title: const Text('Timer'),
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Text(
+          '$timerValue',
+          style: const TextStyle(fontSize: 50),
         ),
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+        const SizedBox(
+          height: 50, //<-- SEE HERE
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            Text(
-              '$timerValue',
-              style: const TextStyle(fontSize: 50),
-            ),
-            const SizedBox(
-              height: 50, //<-- SEE HERE
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                startButton(startTimer),
-                resetButton(resetTimer),
-              ],
-            )
+            startButton(startTimer),
+            resetButton(resetTimer),
           ],
-        ),
+        )
+      ],
     );
   }
 }

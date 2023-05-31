@@ -1,11 +1,8 @@
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:holdam_mobile/widget/coupon_list.dart';
-import 'package:holdam_mobile/widget/signin.dart';
+import 'package:holdam_mobile/constants.dart';
+import 'package:holdam_mobile/widget/timer.dart';
 
-void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+void main() {
   runApp(const MyApp());
 }
 
@@ -14,10 +11,17 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       title: 'Holdam App',
 
-      home: const SignInScreen(),
+      home: Scaffold(
+          appBar: AppBar(
+            title: const Text('mi app'),
+          ),
+          body: const Center(
+            child: MyTimer(key: timerKey)
+            )
+          ),
     );
   }
 }
