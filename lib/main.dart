@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Holdam App Testing',
+      title: 'Holdam App Testing.',
 
       home: Scaffold(
           appBar: AppBar(
