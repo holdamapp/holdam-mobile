@@ -6,7 +6,7 @@ TextField textField(String text, IconData icon, bool isPasswordType, TextEditing
     obscureText: isPasswordType,
     enableSuggestions: !isPasswordType,
     autocorrect: !isPasswordType,
-    cursorColor: Colors.white,
+    cursorColor: Colors.black.withOpacity(0.9),
     style: TextStyle(color: Colors.white.withOpacity(0.9)),
     decoration: InputDecoration(
       prefixIcon: Icon(

@@ -2,6 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:holdam_mobile/widget/coupon_list.dart';
 
+import '../reusable_widgets/logo_widget.dart';
 import '../reusable_widgets/signin_signup_button.dart';
 import '../reusable_widgets/text_field.dart';
 import '../utils/color_utils.dart';
@@ -13,7 +14,7 @@ class SignUpScreen extends StatefulWidget {
   _SignUpScreenState createState() => _SignUpScreenState();
 }
 
-class _SignUpScreenState extends State<SignUpScreen> {
+class _SignUpScreenState extends State<SignUpScreen> { //TODO Add animations and validations
   TextEditingController _usernameTextController = TextEditingController();
   TextEditingController _emailTextController = TextEditingController();
   TextEditingController _passwordTextController = TextEditingController();
@@ -35,6 +36,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
             padding: EdgeInsets.fromLTRB(20, 120, 20, 0),
             child: Column(
               children: <Widget>[
+                logoWidget("assets/images/Holdam_marca-11.png"),
                 SizedBox(
                   height: 20,
                 ),

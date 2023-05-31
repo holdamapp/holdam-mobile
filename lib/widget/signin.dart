@@ -15,7 +15,7 @@ class SignInScreen extends StatefulWidget {
   _SignInScreenState createState() => _SignInScreenState();
 }
 
-class _SignInScreenState extends State<SignInScreen> {
+class _SignInScreenState extends State<SignInScreen> { //TODO Add animations and validations
   TextEditingController _emailTextController = TextEditingController();
   TextEditingController _passwordTextController = TextEditingController();
   @override
@@ -83,4 +83,3 @@ class _SignInScreenState extends State<SignInScreen> {
   }
 
 }
-
