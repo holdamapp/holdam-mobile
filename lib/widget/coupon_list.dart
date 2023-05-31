@@ -18,7 +18,7 @@ class _CouponsListState extends State<CouponsList> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Coupon list'),
+        title: const Text('Coupon lisst'),
       ),
       body: ListView.builder(
         padding: const EdgeInsets.all(16.0),
