@@ -13,15 +13,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Holdam App',
-
       home: Scaffold(
           appBar: AppBar(
             title: const Text('mi app'),
           ),
-          body: const Center(
-            child: MyTimer(key: timerKey)
-            )
-          ),
+          body: const Center(child: MyTimer(key: timerKey))),
     );
   }
 }
